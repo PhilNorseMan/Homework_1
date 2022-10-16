@@ -19,8 +19,18 @@ if (number < 0)
     Console.WriteLine("Невозможно отобразить четные числа от 1 до " + number + ". Выполняется отображение от " + number + " до 1.");
     while (0 >= number)
     {
-        Console.Write(number + " ");
-        number = number +2;
+        if (number % 2 == 0)
+        {
+            Console.Write(number + " ");
+            number = number + 2;
+        }
+        else
+        {
+            number = number + 1;
+            Console.Write(number + " ");
+            number = number + 2;
+        }
+
     }
 }
 
